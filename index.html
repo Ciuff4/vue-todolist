@@ -17,9 +17,9 @@
         </div>
         <div class="todo-container">
             <ul>
-                <li v-for="todo in todos">
+                <li v-for="(todo, index) in todos">
                     <p>{{todo.text}}</p>
-                    <i class="fa-solid fa-xmark"></i>
+                    <i @click="removeToDo(index)" class="fa-solid fa-xmark"></i>
                 </li>
             </ul>
         </div>

@@ -9,16 +9,19 @@ const app= new Vue({
             },
             {
                 text:'ciao2',
-                done:'true',
+                done:'false',
             },
             {
                 text:'ciao3',
                 done:'false',
             }
-        ]
+        ],
+        isDone:true,
     },
 
     methods:{
-        
+        removeToDo(index){
+            this.todos.splice(index, 1);
+        }
     }
 })
