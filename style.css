@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    width: 90%;
+    margin: 50px auto ;
+    text-align: center;
+}
+
+h1{
+    padding-bottom: 20px;
+}
+
+.insert-container{
+    margin-bottom: 30px;
+}
+
+.todo-container{
+    width: 50%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+ul li{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    color: white;
+    cursor: pointer;
+}
+
+ul li:hover{
+    color: green;
+}
