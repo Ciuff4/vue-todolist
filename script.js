@@ -28,7 +28,11 @@ const app= new Vue({
             this.todos.splice(index, 1);
         },
         addNewTodo(){
-            this.todos.push(this.newTodo)
+            const newTodo={
+                text: this.newTodo.text,
+                done:false,
+            };
+            this.todos.push(newTodo);
         }
     }
 })
