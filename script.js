@@ -17,11 +17,18 @@ const app= new Vue({
             }
         ],
         isDone:true,
+        newTodo:{
+            text: "",
+            done:false,
+        },
     },
 
     methods:{
         removeToDo(index){
             this.todos.splice(index, 1);
+        },
+        addNewTodo(){
+            this.todos.push(this.newTodo)
         }
     }
 })
