@@ -12,13 +12,13 @@
     <div id="app" class="container">
         <h1>To-Do list</h1>
         <div class="insert-container">
-            <input v-model="newTodo.text" type="text" placeholder="Nuovo ToDo">
+            <input v-model="newTodo"  type="text" placeholder="Nuovo ToDo">
             <button @click="addNewTodo" >Invio</button>
         </div>
         <div class="todo-container">
             <ul>
                 <li v-for="(todo, index) in todos">
-                    <p>{{todo.text}}</p>
+                    <p @click="doLineThrough(index)" :class="todos[index].done===true ? 'done': ''">{{todo.text}} </p>
                     <i @click="removeToDo(index)" class="fa-solid fa-xmark"></i>
                 </li>
             </ul>

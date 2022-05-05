@@ -13,26 +13,27 @@ const app= new Vue({
             },
             {
                 text:'ciao3',
-                done:'false',
+                done:'true',
             }
         ],
-        isDone:true,
-        newTodo:{
-            text: "",
-            done:false,
-        },
+        newTodo:"",
     },
 
     methods:{
         removeToDo(index){
             this.todos.splice(index, 1);
-        },
+        }, 
+
         addNewTodo(){
-            const newTodo={
-                text: this.newTodo.text,
+            const newTodoAdd={
+                text:this.newTodo,
                 done:false,
             };
-            this.todos.push(newTodo);
+            this.todos.push(newTodoAdd);
+        },
+
+        doLineThrough(index){
+            this.todos[index].done= !this.todos[index].done;
         }
     }
 })
